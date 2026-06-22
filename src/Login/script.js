@@ -9,6 +9,7 @@ function login(){
             id: Math.floor(Math.random()*100000)
         }
         localStorage.setItem("usuario", JSON.stringify(user))
+        window.location.href = "../Loja"
     }else{
         document.getElementById("error-modal").style.display = "flex"
         document.getElementById("nome").style.border = "3px solid red"
