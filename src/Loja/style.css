@@ -3,13 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: "Inter", sans-serif !important;
-    width: 100VW;
+    width: 100vw;
     height: auto;
     overflow-x: hidden;
     padding: 20px;
 }
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #ff7d00;
+}
+
 .wrap{
     display: flex;
     flex-wrap: wrap;
@@ -19,6 +30,7 @@ body{
     height: auto;
     padding: 5%;
 }
+
 .center{
     display: flex;
     flex-wrap: wrap;

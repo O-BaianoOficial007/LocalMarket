@@ -1,9 +1,6 @@
-$(document).ready(function(){
-    //recupera o carrinho do localstorage
+$(document).ready(function() {
     const carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
-    //atribuir a uma variável a lista do html
     const listaElement = $('#lista')
-    //atribuir o total a variável total do id do html
     const totalElement = $("#total")
 
     function exibirCarrinho(){
@@ -11,13 +8,12 @@ $(document).ready(function(){
         let totalPreco = 0
 
         $.each(carrinho, function(index, item){
-            //criando um elemento de linha de lista para cada item com descrição e preço
-            const listItem = $("<li>").text(`${item.desc} - Preco: $${item.preco}`)
+            const listItem = $("<li>").text(`${item.desc} - Preço: $${item.preco}`)
 
-            //criar um botao de remover o item
             const removeButton = $("<button>").text("❌").css("margin-left", "10px").click(function(){
                 removerItem(index)
             })
+
             listItem.append(removeButton)
             listaElement.append(listItem)
 
@@ -25,6 +21,7 @@ $(document).ready(function(){
         })
         totalElement.text(`Total: $${totalPreco}`)
     }
+
     function removerItem(index){
         carrinho.splice(index,1)
         localStorage.setItem("carrinho", JSON.stringify(carrinho))

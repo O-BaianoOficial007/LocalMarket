@@ -1,4 +1,4 @@
-let produtos
+let produtos 
 
 window.onload = function(){
     var storedUser = localStorage.getItem("usuario")
@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function(){
                         <img src="${produto.imagem}" class="card-img-top" alt="${produto.desc}">
                         <div class="card-body">
                             <h5 class="card-title">${produto.desc}</h5>
-                            <p class="card-text">Salário: $${produto.sal}</p>
-                            <a href="#" class="btn btn-primary adicionar data-indice="${index}">Encaminhar</a>
+                            <p class="card-text">Salário: R$${produto.preco}</p>
+                            <a href="#" class="btn btn-primary adicionar" data-indice="${index}">Adicionar ao Carrinho</a>
                         </div>
                     </div>
                 `
@@ -52,4 +52,5 @@ document.addEventListener("DOMContentLoaded", function(){
         localStorage.setItem("carrinho", JSON.stringify(carrinho))
         alert("Produto adicionado com sucesso!!!")
     })
+
 })

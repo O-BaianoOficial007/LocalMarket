@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 #pedido{
     display: none;
     position: absolute;
@@ -13,8 +14,9 @@
     padding: 20px;
     background-color: green;
     font-size: 22px;
-    width: 380;
+    width: 380px;
 }
+
 .btn-word{
     border: none;
     padding: 10px;
@@ -24,6 +26,7 @@
     background-color: blue;
     color: white;
 }
+
 .btn-word:hover{
     cursor: pointer;
     opacity: 0.6;
